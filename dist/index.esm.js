@@ -5084,7 +5084,7 @@ var BodyWrapper = styled(Box)(templateObject_5 || (templateObject_5 = __makeTemp
 var Inner = styled.div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  flex-grow: 1;\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n"], ["\n  flex-grow: 1;\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n"])));
 var Menu$1 = function (_a) {
     var _b;
-    _a.userMenu; var banner = _a.banner; _a.globalMenu; var isDark = _a.isDark, toggleTheme = _a.toggleTheme, currentLang = _a.currentLang, setLang = _a.setLang, cakePriceUsd = _a.cakePriceUsd, links = _a.links, subLinks = _a.subLinks, footerLinks = _a.footerLinks, activeItem = _a.activeItem, activeSubItem = _a.activeSubItem, langs = _a.langs, buyCakeLabel = _a.buyCakeLabel, children = _a.children;
+    var userMenu = _a.userMenu, banner = _a.banner, globalMenu = _a.globalMenu, isDark = _a.isDark, toggleTheme = _a.toggleTheme, currentLang = _a.currentLang, setLang = _a.setLang, cakePriceUsd = _a.cakePriceUsd, links = _a.links, subLinks = _a.subLinks, footerLinks = _a.footerLinks, activeItem = _a.activeItem, activeSubItem = _a.activeSubItem, langs = _a.langs, buyCakeLabel = _a.buyCakeLabel, children = _a.children;
     var isMobile = useMatchBreakpoints().isMobile;
     var _c = useState(true), showMenu = _c[0], setShowMenu = _c[1];
     var refPrevOffset = useRef(window.pageYOffset);
@@ -5129,13 +5129,17 @@ var Menu$1 = function (_a) {
                 React__default.createElement(Flex, null,
                     React__default.createElement(Logo$1, { isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
                     !isMobile && React__default.createElement(MenuItems, { items: links, activeItem: activeItem, activeSubItem: activeSubItem, ml: "24px" })),
-                React__default.createElement(Flex, { alignItems: "center", height: "100%" }, !isMobile && (React__default.createElement(React__default.Fragment, null,
-                    React__default.createElement(Box, { mr: "12px" },
-                        React__default.createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd })),
-                    React__default.createElement(Box, { mr: "12px" },
-                        React__default.createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd })),
-                    React__default.createElement(Box, { mr: "12px" },
-                        React__default.createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd }))))))),
+                React__default.createElement(Flex, { alignItems: "center", height: "100%" },
+                    !isMobile && (React__default.createElement(React__default.Fragment, null,
+                        React__default.createElement(Box, { mr: "12px" },
+                            React__default.createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd })),
+                        React__default.createElement(Box, { mr: "12px" },
+                            React__default.createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd })),
+                        React__default.createElement(Box, { mr: "12px" },
+                            React__default.createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd })))),
+                    globalMenu,
+                    " ",
+                    userMenu))),
         subLinks && (React__default.createElement(Flex, { justifyContent: "space-around" },
             React__default.createElement(SubMenuItems, { items: subLinksWithoutMobile, mt: totalTopMenuHeight + 1 + "px", activeItem: activeSubItem }),
             (subLinksMobileOnly === null || subLinksMobileOnly === void 0 ? void 0 : subLinksMobileOnly.length) > 0 && (React__default.createElement(SubMenuItems, { items: subLinksMobileOnly, mt: totalTopMenuHeight + 1 + "px", activeItem: activeSubItem, isMobileOnly: true })))),

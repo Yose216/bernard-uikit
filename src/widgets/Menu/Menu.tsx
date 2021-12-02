@@ -146,6 +146,7 @@ const Menu: React.FC<NavProps> = ({
                 </Box>
               </>
             )}
+            {globalMenu} {userMenu}
 
           </Flex>
         </StyledNav>
