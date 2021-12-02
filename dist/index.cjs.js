@@ -781,7 +781,7 @@ var Logo$2 = function (_a) {
             React__default['default'].createElement("path", { id: "path3", d: "", stroke: "none", fill: "#5DCE80", "fill-rule": "evenodd" }),
             React__default['default'].createElement("path", { id: "path4", d: "", stroke: "none", fill: "#5DCE80", "fill-rule": "evenodd" }))));
 };
-var LogoWithTextIcon = React__default['default'].memo(Logo$2, function (prev, next) { return prev.isDark === next.isDark; });
+var LogoWithText = React__default['default'].memo(Logo$2, function (prev, next) { return prev.isDark === next.isDark; });
 
 var Icon$1e = function (props) {
     return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 40 40" }, props),
@@ -1545,7 +1545,7 @@ var IconModule = /*#__PURE__*/Object.freeze({
     LogoIcon: Icon$1h,
     LogoRoundIcon: Icon$1g,
     LogoutIcon: Icon$1f,
-    LogoWithTextIcon: LogoWithTextIcon,
+    LogoWithTextIcon: LogoWithText,
     MathWalletIcon: Icon$1e,
     MedalBronzeIcon: Icon$1d,
     MedalGoldIcon: Icon$1c,
@@ -4835,7 +4835,7 @@ var StyledToolsContainer = styled__default['default'](Flex)(templateObject_5$1 |
     var theme = _a.theme;
     return theme.mediaQueries.sm;
 });
-var StyledSocialLinks = styled__default['default'](SocialLinks$1)(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  border-bottom: 1px solid ", ";\n"], ["\n  border-bottom: 1px solid ", ";\n"])), darkColors.cardBorder);
+styled__default['default'](SocialLinks$1)(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  border-bottom: 1px solid ", ";\n"], ["\n  border-bottom: 1px solid ", ";\n"])), darkColors.cardBorder);
 styled__default['default'].span(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  color: ", ";\n"], ["\n  color: ", ";\n"])), darkColors.text);
 var templateObject_1$8, templateObject_2$5, templateObject_3$2, templateObject_4$1, templateObject_5$1, templateObject_6$1, templateObject_7;
 
@@ -4845,7 +4845,15 @@ var MenuItem = function (_a) {
         React__default['default'].createElement(Flex, { flexDirection: "column", width: ["100%", null, "1200px;"] },
             React__default['default'].createElement(StyledToolsContainer, { order: [1, null, 3], flexDirection: ["column", null, "row"], justifyContent: "space-between" },
                 React__default['default'].createElement(Flex, { order: [1, null, 2], mb: ["24px", null, "0"], justifyContent: "space-between", alignItems: "center" },
-                    React__default['default'].createElement(StyledSocialLinks, { order: [2], pb: ["42px", null, "32px"], mb: ["0", null, "32px"] }),
+                    React__default['default'].createElement(Box, { mr: "20px" },
+                        React__default['default'].createElement(Link, { external: true, key: "twitter", href: "https://twitter.com", "aria-label": "twitter", mr: "5px" },
+                            React__default['default'].createElement(Icon$d, { width: "20px", color: "#5DCE80" }))),
+                    React__default['default'].createElement(Box, { mr: "20px" },
+                        React__default['default'].createElement(Link, { external: true, key: "twitter", href: "https://twitter.com", "aria-label": "twitter", mr: "5px" },
+                            React__default['default'].createElement(Icon$1E, { width: "20px", color: "#5DCE80" }))),
+                    React__default['default'].createElement(Box, { mr: "20px" },
+                        React__default['default'].createElement(Link, { external: true, key: "twitter", href: "https://twitter.com", "aria-label": "twitter", mr: "5px" },
+                            React__default['default'].createElement(Icon$s, { width: "20px", color: "#5DCE80" }))),
                     React__default['default'].createElement(Box, { mr: "20px" },
                         React__default['default'].createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd, color: darkColors.textSubtle })),
                     React__default['default'].createElement(Box, { mr: "20px" },
@@ -4867,7 +4875,7 @@ var MenuItems = function (_a) {
     })));
 };
 
-var blink = styled.keyframes(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  0%,  100% { transform: scaleY(1); } \n  50% { transform:  scaleY(0.1); } \n"], ["\n  0%,  100% { transform: scaleY(1); } \n  50% { transform:  scaleY(0.1); } \n"])));
+var blink = styled.keyframes(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  0%,  100% { transform: scaleY(1); }\n  50% { transform:  scaleY(0.1); }\n"], ["\n  0%,  100% { transform: scaleY(1); }\n  50% { transform:  scaleY(0.1); }\n"])));
 var StyledLink = styled__default['default'](reactRouterDom.Link)(templateObject_2$4 || (templateObject_2$4 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 160px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n  .right-eye {\n    animation-delay: 20ms;\n  }\n  &:hover {\n    .left-eye,\n    .right-eye {\n      transform-origin: center 60%;\n      animation-name: ", ";\n      animation-duration: 350ms;\n      animation-iteration-count: 1;\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 160px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n  .right-eye {\n    animation-delay: 20ms;\n  }\n  &:hover {\n    .left-eye,\n    .right-eye {\n      transform-origin: center 60%;\n      animation-name: ", ";\n      animation-duration: 350ms;\n      animation-iteration-count: 1;\n    }\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
@@ -4876,11 +4884,11 @@ var StyledLink = styled__default['default'](reactRouterDom.Link)(templateObject_
     return theme.mediaQueries.nav;
 }, blink);
 var Logo = function (_a) {
-    var isDark = _a.isDark, href = _a.href;
+    _a.isDark; var href = _a.href;
     var isAbsoluteUrl = href.startsWith("http");
     var innerLogo = (React__default['default'].createElement(React__default['default'].Fragment, null,
         React__default['default'].createElement(Icon$1h, { className: "mobile-icon" }),
-        React__default['default'].createElement(LogoWithTextIcon, { className: "desktop-icon", isDark: isDark })));
+        React__default['default'].createElement(Icon$1h, { className: "desktop-icon" })));
     return (React__default['default'].createElement(Flex, null, isAbsoluteUrl ? (React__default['default'].createElement(StyledLink, { as: "a", href: href, "aria-label": "Pancake home page" }, innerLogo)) : (React__default['default'].createElement(StyledLink, { to: href, "aria-label": "Pancake home page" }, innerLogo))));
 };
 var Logo$1 = React__default['default'].memo(Logo, function (prev, next) { return prev.isDark === next.isDark; });
@@ -5516,7 +5524,7 @@ exports.ListViewIcon = Icon$1j;
 exports.LoginIcon = Icon$1i;
 exports.LogoIcon = Icon$1h;
 exports.LogoRoundIcon = Icon$1g;
-exports.LogoWithTextIcon = LogoWithTextIcon;
+exports.LogoWithTextIcon = LogoWithText;
 exports.LogoutIcon = Icon$1f;
 exports.MathWalletIcon = Icon$1e;
 exports.MedalBronzeIcon = Icon$1d;

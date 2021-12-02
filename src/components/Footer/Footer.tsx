@@ -15,7 +15,7 @@ import { FooterProps } from "./types";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import LangSelector from "../LangSelector/LangSelector";
 import CakePrice from "../CakePrice/CakePrice";
-import { LogoWithTextIcon, ArrowForwardIcon } from "../Svg";
+import { LogoWithTextIcon, ArrowForwardIcon, TwitterIcon, TelegramIcon, DiscordIcon } from "../Svg";
 import { Button } from "../Button";
 import { Colors } from "../..";
 
@@ -40,8 +40,21 @@ const MenuItem: React.FC<FooterProps> = ({
         >
 
           <Flex order={[1, null, 2]} mb={["24px", null, "0"]} justifyContent="space-between" alignItems="center">
-            <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} />
-
+            <Box mr="20px">
+              <Link external key="twitter" href="https://twitter.com" aria-label="twitter" mr="5px">
+                <TwitterIcon width="20px" color="#5DCE80"/>
+              </Link>
+            </Box>
+            <Box mr="20px">
+              <Link external key="twitter" href="https://twitter.com" aria-label="twitter" mr="5px">
+                <DiscordIcon width="20px" color="#5DCE80" />
+              </Link>
+            </Box>
+            <Box mr="20px">
+              <Link external key="twitter" href="https://twitter.com" aria-label="twitter" mr="5px">
+                <TelegramIcon width="20px" color="#5DCE80" />
+              </Link>
+            </Box>
             <Box mr="20px">
               <CakePrice cakePriceUsd={cakePriceUsd} color={darkColors.textSubtle as keyof Colors} />
             </Box>

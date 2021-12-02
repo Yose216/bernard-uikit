@@ -10,8 +10,8 @@ interface Props {
 }
 
 const blink = keyframes`
-  0%,  100% { transform: scaleY(1); } 
-  50% { transform:  scaleY(0.1); } 
+  0%,  100% { transform: scaleY(1); }
+  50% { transform:  scaleY(0.1); }
 `;
 
 const StyledLink = styled(Link)`
@@ -49,7 +49,7 @@ const Logo: React.FC<Props> = ({ isDark, href }) => {
   const innerLogo = (
     <>
       <LogoIcon className="mobile-icon" />
-      <LogoWithTextIcon className="desktop-icon" isDark={isDark} />
+      <LogoIcon className="desktop-icon" />
     </>
   );
 
